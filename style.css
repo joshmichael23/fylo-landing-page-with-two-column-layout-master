@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+
+:root{
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+    --LightGrayishBlue: hsl(240, 75%, 98%);
+    --LightGray: hsl(0, 0%, 75%);
+    --OpacModerateCyan: hsl(170, 45%, 43%, .6);
+    --OpacBrightBlue: hsl(224, 93%, 58%, .6);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans";
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select, a{
+    font: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+header{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+header>img{
+    align-items: center;
+    justify-self: start;
+    
+}
+
+header>nav{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    align-self: center;
+    justify-self: end;
+}
+
+
+/* main */
+
+main{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+.hero-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    row-gap: 1rem;
+    text-align: center;
+}
+
+.hero-content > h1{
+    color: var(--VeryDarkBlue);
+    font-family: "Raleway";
+}
+.hero-content > h1 > span{
+    display: block;
+}
+
+.hero-content > p{
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+}
+
+.hero-content > form > input{
+    border: 1px solid black;
+    padding: .8rem 2rem;
+}
+/* section1 */
+
+.section1{
+    display: grid;
+}
+
+.section1 > .hero-content > form{
+    display: grid;
+    gap: 1rem;
+}
+
+.section1> .hero-content > form *{
+    width:100%;
+    border-radius: 4px;
+    display: block;
+}
+
+.section1 button{
+    background-color: var(--BrightBlue);
+    border: none;
+    color:white;
+    padding: .5rem 0px;
+    transition: background-color .2s ease;
+}
+
+.section1 button:focus{
+    background-color: var(--OpacBrightBlue);
+
+}
+/* section2 */
+
+.section2{
+    background-image:  url('/images/bg-curve-mobile.svg'), linear-gradient(hsl(240, 75%, 98%), hsl(240, 75%, 98%));
+    background-position-x: center, center;
+    background-position-y: top, 2.5rem;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    display: grid;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 2rem;
+    gap: 1rem;
+}
+.section2 > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1rem;
+}
+
+.section2 > div > h1{
+    color: var(--VeryDarkBlue);
+    font-family: "Raleway";
+    font-size: 1.25rem;
+}
+
+.section2-content p {
+    color: var(--VeryDarkBlue);
+    width: 90%;
+    font-size: 1.125rem;
+}
+.section2-content > button{
+    padding:0;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    align-content: center;
+    background: none;
+    border: none;
+    font-size: 1.125rem;
+    color: var(--ModerateCyan);
+    border-bottom: 1px solid var(--ModerateCyan);
+    transition: color .2s ease;
+}
+
+.section2-content > button:focus{
+    color: var(--OpacModerateCyan);
+}
+
+.section2-content > button > img{
+    width:20px;
+}
+/* section 3 */
+
+.section3{
+    background-color: white;
+    justify-self: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0px 0px 1rem gainsboro;
+    color: var(--VeryDarkBlue);
+}
+
+.section3 > img{
+    justify-self: start;
+}
+/* testimonial */
+
+.testimonial-user{
+    justify-self: start;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, auto) 1fr;
+}
+
+.testimonial-user > img{
+    border-radius: 50%;
+    width: 40px;
+}
+.testimonial-user > h1{
+    font-family: "Raleway";
+    font-size: .8rem;
+}
+
+.testimonial-user > h1 > span{
+    display: block;
+}
+
+/* section4 */
+
+.section4{
+    background-color: var(--DesaturatedBlue);
+
+    padding: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+.section4 > form{
+    width: 80%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.section4 > form *{
+    width:100%;
+    margin-bottom: 0.5rem;
+}
+
+.section4 > form > input{
+    grid-row:1/2;
+    grid-column: 1/6;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.section4 > form > button{
+    border-radius: 6px;
+    grid-row:2/3;
+    grid-column: 1/6;
+    border: none;
+    background: var(--BrightBlue);
+    color: white;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+/* footer */
+
+footer{
+    background-color: var(--VeryDarkBlue);
+    
+    color: white;
+    display: grid;
+    row-gap: 2rem;
+}
+footer > .footer-bottom{
+    color: var(--LightGray);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    
+}
+.footer-bottom>nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bottom > div:first-of-type > p:first-of-type::before{
+    content:url('/images/icon-phone.svg');
+    margin-right: 1rem;
+
+}
+
+.footer-bottom > div:first-of-type > p:last-of-type::before{
+    content:url('/images/icon-email.svg');
+    margin-right: 1rem;
+}
+
+.footer-bottom > nav > a{
+    color:var(--LightGray);
+    cursor: pointer;
+}
+
+footer > nav > a:nth-child(4){
+    margin-bottom: 1rem;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.social-media > a {
+    width:50px;
+    height:50px;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.social-media > a > i{
+    color:white;
+}
+
+.footer-bottom img{
+    filter: brightness(0) invert(1);
+}
+@media screen and (min-width:800px) {
+
+    header{
+        padding: 4rem;
+    }
+
+    main{
+        padding: 0px 4rem;
+    }
+    main > section{
+        
+        justify-self: center;
+    }
+    .section1{
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .section1 > img{
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .section1> div{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            grid-template-rows: repeat(3, auto);
+        }
+
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            text-align: start;
+        }
+
+        .hero-content > h1{
+            font-size: 2.30rem;
+        }
+
+        .hero-content > h1 > span{
+            display: inline-block;
+        }
+
+        .hero-content > p{
+            font-size: 1.25rem;
+        }
+        .section1> .hero-content > form{
+            width: 80%;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2rem;
+        }
+
+        .section1 > .hero-content > form > input{
+            grid-column: 1/3;
+        }
+
+
+    .section2{
+        grid-template-columns: 1fr 1fr;
+        background-image: url('/images/bg-curve-desktop.svg'), linear-gradient(hsl(240, 75%, 98%), hsl(240, 75%, 98%));
+        background-position-y: top, 114px;
+        padding:4rem;
+        margin-right: -4rem;
+        margin-left: -4rem;
+        gap: 2rem;
+    }
+
+    
+        .section2 > div > h1{
+            font-size: 2.30rem;
+        }
+        .section2 > img{
+            grid-row: 1/3;
+            grid-column: 2/3;
+        }
+        .section2> .section2-content{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            justify-items: start;
+        }
+
+        .section3{
+            justify-self: start;
+        }
+
+    .section4{
+        padding: 4rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .section4 > div:first-of-type > *{
+            text-align: start;
+        }
+
+        .section4 > form{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .section4 >form > button{
+            grid-column: 1/3;
+        }
+
+
+
+    footer > .footer-bottom{
+        padding: 4rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        line-height: 2.5rem;
+    }
+
+        .footer-bottom img{
+            
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+
+    
+}
